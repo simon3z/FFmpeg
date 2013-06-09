@@ -1787,6 +1787,29 @@ slope
 Determine how steep is the filter's shelf transition.
 @end table
 
+@section vediting, aediting
+
+Select the segments of video and audio to include.
+
+The filter accepts the following options:
+
+@table @option
+@item segments
+The segments of the video or audio to include. The format is:
+@example
+vediting=START_TS1-END_TS1#START_TS2-END_TS2#...
+@end example
+@end table
+
+The segments must be monotonically ordered and cannot overlap.
+In general the same segments are declared both for video and
+audio tracks (vediting/aediting) but there's no limitation in
+this respect.
+
+The algorithm used to calculate the output pts is highly
+resistant to damaged streams (e.g. DVB-T) as it reuses the
+input pts preventing the audio/video de-synchronization.
+
 @section volume
 
 Adjust the input audio volume.
