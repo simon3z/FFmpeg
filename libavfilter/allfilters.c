@@ -53,6 +53,7 @@ void avfilter_register_all(void)
     REGISTER_FILTER(AEDITING,       aediting,       af);
     REGISTER_FILTER(AEVAL,          aeval,          af);
     REGISTER_FILTER(AFADE,          afade,          af);
+    REGISTER_FILTER(AFIXPTS,        afixpts,        af);
     REGISTER_FILTER(AFORMAT,        aformat,        af);
     REGISTER_FILTER(AINTERLEAVE,    ainterleave,    af);
     REGISTER_FILTER(ALLPASS,        allpass,        af);
@@ -203,6 +204,7 @@ void avfilter_register_all(void)
     REGISTER_FILTER(TRIM,           trim,           vf);
     REGISTER_FILTER(UNSHARP,        unsharp,        vf);
     REGISTER_FILTER(VEDITING,       vediting,       vf);
+    REGISTER_FILTER(VFIXPTS ,       vfixpts,        vf);
     REGISTER_FILTER(VFLIP,          vflip,          vf);
     REGISTER_FILTER(VIDSTABDETECT,  vidstabdetect,  vf);
     REGISTER_FILTER(VIDSTABTRANSFORM, vidstabtransform, vf);
